@@ -72,3 +72,5 @@ export default async function NewsletterRenderPage({
 }
 
 export const revalidate = 3600
+
+

@@ -14,11 +14,11 @@ import { seo } from '~/lib/seo'
 export const metadata: Metadata = {
   metadataBase: seo.url,
   title: {
-    template: '%s | Cali Castle',
+    template: '%s | Chenyme',
     default: seo.title,
   },
   description: seo.description,
-  keywords: 'Cali,Cali Castle,郭晓楠,佐玩,创始人,CEO,开发者,设计师,细节控,创新',
+  keywords: 'chenyme, blog, AAVT, OaiT',
   manifest: '/site.webmanifest',
   robots: {
     index: true,
@@ -34,17 +34,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: seo.title,
-      template: '%s | Cali Castle',
+      template: '%s | chenyme',
     },
     description: seo.description,
-    siteName: 'Cali Castle',
+    siteName: 'Chenyme',
     locale: 'zh_CN',
     type: 'website',
-    url: 'https://cali.so',
+    url: 'https://blog.chenyme.top',
   },
   twitter: {
-    site: '@thecalicastle',
-    creator: '@thecalicastle',
+    site: '@chenyme',
+    creator: '@chenyme',
     card: 'summary_large_image',
     title: seo.title,
     description: seo.description,

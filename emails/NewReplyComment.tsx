@@ -6,12 +6,12 @@ import { Button, Heading, Hr, Img, Link, Section, Text } from './_components'
 import Layout from './Layout'
 
 const NewReplyCommentEmail = ({
-  postLink = 'https://cali.so',
+  postLink = 'https://blog.chenyme.top',
   postTitle = '测试文章 Lorem ipsum dolor sit amet, consectetur adipisicing elit',
   postImageUrl = 'https://cn.zolplay.com/api/og?title=测试文章',
-  userFirstName = 'Cali',
-  userLastName = 'Castle',
-  userImageUrl = 'https://cali.so/icon.png',
+  userFirstName = 'Chenyme',
+  userLastName = '',
+  userImageUrl = 'https://blog.chenyme.top/icon.ico',
   commentContent = '*测试评论*\n- Wow wtf\n- Cool',
 }: {
   postLink?: string | null
@@ -94,3 +94,4 @@ const NewReplyCommentEmail = ({
 }
 
 export default NewReplyCommentEmail
+

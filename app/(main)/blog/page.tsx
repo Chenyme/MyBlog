@@ -6,7 +6,7 @@ import { Container } from '~/components/ui/Container'
 import { BlogPosts } from './BlogPosts'
 
 const description =
-  '写博客文章是我比较喜欢的沉淀分享方式，我希望能够把好用的技术知识传递给更多的人。我比较喜欢围绕着技术为主的话题，但是也会写一些非技术的话题，比如设计、创业、企业管理、生活随笔等等。'
+  '比起博客这个说法，我更愿意称之为忙里偷闲的生活碎片。这里记录了我在生活中的所思所想，以及一些技术上的探索。希望你能在这里找到一些有趣的东西。'
 export const metadata = {
   title: '我的博客',
   description,
@@ -27,7 +27,7 @@ export default function BlogPage() {
     <Container className="mt-16 sm:mt-24">
       <header className="max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          欢迎光临我的博客
+          忙里偷闲的生活碎片
         </h1>
         <p className="my-6 text-base text-zinc-600 dark:text-zinc-400">
           <Balancer>{description}</Balancer>
