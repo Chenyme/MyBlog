@@ -5,5 +5,5 @@ export const emailConfig = {
   baseUrl:
     env.VERCEL_ENV === 'production'
       ? env.NEXT_PUBLIC_SITE_URL
-      : 'https://email.chenyme.top',
+      : 'https://blog.chenyme.top/',
 }
