@@ -33,6 +33,8 @@ export default defineType({
         { title: 'H2', value: 'h2' },
         { title: 'H3', value: 'h3' },
         { title: 'H4', value: 'h4' },
+        { title: 'H5(侧栏不显示)', value: 'h5' },
+        { title: 'H6(侧栏不显示)', value: 'h6' },
         { title: '引用', value: 'blockquote' },
       ],
       lists: [
@@ -44,7 +46,7 @@ export default defineType({
         // Decorators usually describe a single property – e.g. a typographic
         // preference or highlighting
         decorators: [
-          { title: '加粗', value: 'strong' },
+          { title: '粗体', value: 'strong' },
           { title: '斜体', value: 'em' },
           { title: '下划线', value: 'underline' },
           { title: '删除线', value: 'strike-through' },
