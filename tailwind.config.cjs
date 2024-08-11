@@ -15,13 +15,13 @@ module.exports = {
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
-      base: ['1rem', { lineHeight: '1.75rem' }],
-      lg: ['1.125rem', { lineHeight: '1.75rem' }],
-      xl: ['1.35rem', { lineHeight: '2rem' }],
-      '2xl': ['1.65rem', { lineHeight: '2rem' }],
-      '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-      '4xl': ['2.2rem', { lineHeight: '2.5rem' }],
-      '5xl': ['2.5rem', { lineHeight: '3.5rem' }],
+      base: ['1.0rem', { lineHeight: '1.5rem' }],  //h7
+      lg: ['1.1rem', { lineHeight: '2rem' }],  //h6
+      xl: ['1.2rem', { lineHeight: '2.5rem' }],  //h5
+      '2xl': ['1.1rem', { lineHeight: '2rem' }],  //h4
+      '3xl': ['1.4rem', { lineHeight: '2.5rem' }],  //h3
+      '4xl': ['2.0rem', { lineHeight: '3rem' }],  //h2
+      '5xl': ['3.0rem', { lineHeight: '3.5rem' }],  //h1
       '6xl': ['3.75rem', { lineHeight: '1' }],
       '7xl': ['4.5rem', { lineHeight: '1' }],
       '8xl': ['6rem', { lineHeight: '1' }],
@@ -107,12 +107,12 @@ module.exports = {
           },
 
           // Headings
-          'h1, h2, h3, h4, h5, h6': {
+          'h1, h2, h3, h4, h5, h6, h7': {
             color: 'var(--tw-prose-headings)',
             fontWeight: theme('fontWeight.medium'),
           },
           h1: {
-            fontSize: theme('fontSize.4xl')[0],
+            fontSize: theme('fontSize.5xl')[0],
             lineHeight: theme('lineHeight.2.5'),
             fontWeight: theme('fontWeight.extrabold'),
             color: 'var(--tw-prose-headings)',
@@ -120,43 +120,50 @@ module.exports = {
             marginBottom: theme('spacing.8'),
           },
           h2: {
-            fontSize: theme('fontSize.3xl')[0],
+            fontSize: theme('fontSize.4xl')[0],
             lineHeight: theme('lineHeight.2.25'),
             fontWeight: theme('fontWeight.bold'),
             color: 'var(--tw-prose-headings)',
-            marginTop: theme('spacing.14'),
-            marginBottom: theme('spacing.6'),
+            marginTop: theme('spacing.24'),
+            marginBottom: theme('spacing.10'),
           },
           h3: {
-            fontSize: theme('fontSize.2xl')[0],
+            fontSize: theme('fontSize.3xl')[0],
             lineHeight: theme('lineHeight.2'),
             fontWeight: theme('fontWeight.semibold'),
             color: 'var(--tw-prose-headings)',
-            marginTop: theme('spacing.12'),
+            marginTop: theme('spacing.15'),
             marginBottom: theme('spacing.6'),
           },
           h4: {
-            fontSize: theme('fontSize.xl')[0],
+            fontSize: theme('fontSize.2xl')[0],
             lineHeight: theme('lineHeight.2'),
             fontWeight: theme('fontWeight.semibold'),
-            marginTop: theme('spacing.10'),
+            marginTop: theme('spacing.12'),
             marginBottom: theme('spacing.4'),
           },
           h5: {
+            fontSize: theme('fontSize.xl')[0],
+            lineHeight: theme('lineHeight.1.75'),
+            fontWeight: theme('fontWeight.medium'),
+            marginTop: theme('spacing.8'),
+            marginBottom: theme('spacing.4'),
+          },
+          h6: {
             fontSize: theme('fontSize.lg')[0],
             lineHeight: theme('lineHeight.1.75'),
             fontWeight: theme('fontWeight.medium'),
-            marginTop: theme('spacing.4'),
-            marginBottom: theme('spacing.2'),
+            marginTop: theme('spacing.2'),
+            marginBottom: theme('spacing.1'),
           },
-          h6: {
+          h7: {
             fontSize: theme('fontSize.base')[0],
             lineHeight: theme('lineHeight.1.75'),
             fontWeight: theme('fontWeight.medium'),
             marginTop: theme('spacing.2'),
             marginBottom: theme('spacing.1'),
           },
-          ':is(h2, h3, h4, h5, h6) + *': {
+          ':is(h2, h3, h4, h5, h6, h7) + *': {
             marginTop: theme('spacing.2'),
           },
 
@@ -197,7 +204,7 @@ module.exports = {
 
           // Quotes
           blockquote: {
-            paddingLeft: theme('spacing.6'),
+            paddingLeft: theme('spacing.3'),
             borderLeftWidth: theme('borderWidth.2'),
             borderLeftColor: 'var(--tw-prose-quote-borders)',
             fontStyle: 'italic',
@@ -227,7 +234,7 @@ module.exports = {
           li: {
             marginTop: theme('spacing.6'),
             marginBottom: theme('spacing.6'),
-            paddingLeft: theme('spacing[3.5]'),
+            paddingLeft: theme('spacing[2]'),
           },
           'li::marker': {
             fontSize: theme('fontSize.sm')[0],
@@ -240,12 +247,16 @@ module.exports = {
             color: 'var(--tw-prose-bullets)',
           },
           'li :is(ol, ul)': {
-            marginTop: theme('spacing.4'),
-            marginBottom: theme('spacing.4'),
+            marginTop: theme('spacing.1'),
+            marginBottom: theme('spacing.1'),
           },
           'li :is(li, p)': {
-            marginTop: theme('spacing.3'),
-            marginBottom: theme('spacing.3'),
+            marginTop: theme('spacing.1'),
+            marginBottom: theme('spacing.1'),
+          },
+          'ul li, ol li': {
+            marginTop: theme('spacing.2'),
+            marginBottom: theme('spacing.2'),
           },
 
           // Code blocks

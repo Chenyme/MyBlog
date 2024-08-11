@@ -17,9 +17,14 @@ interface Node {
   children?: HeadingNode[]
 }
 
-const parseOutline = (nodes: Node[]) => {
+const parseOutline = (nodes: Node[], maxDepth: number = 4) => {
   return nodes
-    .filter((node) => node._type === 'block' && node.style.startsWith('h'))
+    .filter(
+      (node) =>
+        node._type === 'block' &&
+        node.style.startsWith('h') &&
+        parseInt(node.style[1]) <= maxDepth
+    )
     .map((node) => {
       return {
         style: node.style,

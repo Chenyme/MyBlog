@@ -65,12 +65,29 @@ export function ProjectCard({ project }: { project: Project }) {
         {isHovering && (
           <motion.footer
             className="pointer-events-none absolute -inset-x-4 -inset-y-6 z-30 select-none px-4 py-6 sm:-inset-x-6 sm:rounded-2xl sm:px-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{
+              opacity: 0,
+              backgroundColor: "rgba(173, 216, 230, 0.8)", // 浅蓝色
+              boxShadow: "0px 0px 0px rgba(0, 0, 0, 0)", // 无阴影
+            }}
+            animate={{
+              opacity: isHovering ? 0.8 : 0,
+              backgroundColor: isHovering
+                ? "rgba(255, 255, 224, 0.2)" // 浅黄色
+                : "rgba(173, 216, 230, 0.8)", // 浅蓝色
+              boxShadow: isHovering
+                ? "0px 1px 1px rgba(0, 0, 0, 0.15)" // 添加阴影
+                : "0px 0px 0px rgba(0, 0, 0, 0)", // 无阴影
+            }}
+            exit={{
+              opacity: 0,
+              backgroundColor: "rgba(173, 216, 230, 0.8)", // 浅蓝色
+              boxShadow: "0px 0px 0px rgba(0, 0, 0, 0)", // 无阴影
+            }}
+            transition={{ duration: 0.5 }}
             style={{
               WebkitMaskImage: maskBackground,
             }}
-            exit={{ opacity: 0 }}
           >
             <div className="absolute inset-x-px inset-y-px rounded-2xl border border-dashed border-zinc-900/30 dark:border-zinc-100/20" />
             <div className="flex h-12 w-12 items-center justify-center rounded-full border border-dashed border-zinc-900/20 bg-white dark:border-zinc-100/20 dark:bg-zinc-800">
