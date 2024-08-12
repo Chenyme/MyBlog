@@ -10,8 +10,8 @@ export default defineType({
   fields: [
     defineField({
       name: 'projects',
-      title: '项目展示列表',
-      description: '在 `/projects` 页面展示的项目列表',
+      title: '项目展示',
+      description: '在 `/projects` 页面展示的项目',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'project' } }],
     }),
@@ -19,7 +19,7 @@ export default defineType({
     defineField({
       name: 'heroPhotos',
       title: '首页图片',
-      description: '首页顶部的几张图片（推荐设置 6 张）',
+      description: '首页顶部的图片展示（推荐设置 6 张）',
       type: 'array',
       of: [{ type: 'image' }],
     }),
@@ -27,7 +27,7 @@ export default defineType({
     defineField({
       name: 'resume',
       title: '简历',
-      description: '在主页侧边栏展示的简历信息（留空就不展示）',
+      description: '主页侧边栏展示的简历信息（留空就不展示）',
       type: 'array',
       of: [
         {
