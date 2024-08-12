@@ -1,6 +1,18 @@
 import { defineArrayMember, defineType } from 'sanity'
+import { LatexPreview } from 'sanity-plugin-latex-input'
 
+import {
+  ImageIcon,
+  mathIcon,
+  mathInlineIcon,
+  OtherImageIcon,
+  TableIcon,
+  TweetIcon,
+  VideoIcon,
+} from '~/sanity/components/Icons'
+import { OtherImagePreview } from '~/sanity/components/OtherImagePreview'
 import { Tweet } from '~/sanity/components/Tweet'
+import { VideoPreview } from '~/sanity/components/VideoPreview'
 
 /**
  * This is the schema type for block content used in the post document type
