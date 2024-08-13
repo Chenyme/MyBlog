@@ -1,10 +1,13 @@
-## Chenyme 的博客
+## Chenyme | 博客
 
-Chenyme 的个人博客网站 [blog.chenyme.top](https://blog.chenyme.top/) 的源码。复刻自：[Cali](https://github.com/CaliCastle/cali.so)
+Chenyme 的个人博客网站 [blog.chenyme.top](https://blog.chenyme.top/) 的源码。二开改自：[Cali](https://github.com/CaliCastle/cali.so)
 
-需要其他服务商的环境变量才能正常运行，所以如果你想要在本地运行，需要自己配置。
+### 新增支持
 
-可查看 `.env.example` 文件，里面包含了所有需要的环境变量。
+- LaTex
+- Table
+- 视频嵌入
+- 图片直链
 
 ### 技术栈
 
@@ -21,17 +24,18 @@ Chenyme 的个人博客网站 [blog.chenyme.top](https://blog.chenyme.top/) 的�
 - [React Email](https://react.email)
 - [Resend](https://resend.com/)
 
+需要其他服务商的环境变量才能正常运行，所以如果你想要在本地运行，需要自己配置。
+
+可查看 `.env.example` 文件，里面包含了所有需要的环境变量。
+
 ### 本地开发
 
 ```bash
-# 安装依赖
-pnpm install
+pnpm install  # 安装依赖
 
-# 启动开发服务器
-pnpm dev
+pnpm dev  # 启动开发服务器
 
-# 构建
-pnpm build
+pnpm build  # 构建
 ```
 
 推荐通过 [Vercel](https://vercel.com/) 一键部署。
